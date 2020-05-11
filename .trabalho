@@ -1,0 +1,55 @@
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+@Entity(tableName = "Curse")
+public class Curse {
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "curseId")
+    private int rId;
+    @Nullable
+    @ColumnInfo(name = "Establishment")
+    private String rEstablishment;
+    
+    public int getId() {
+        return rId;
+    }
+    public void setId(@NonNull int id) {
+        rId = id;
+    }
+    public String getEstablishment() {
+        return rEstablishment;
+    }
+    public void setEstablishment(@Nullable String Establishment) {
+        rEstablishment = establishment;
+    }
+    public String getTitle() {
+        return rTitle;
+    }
+    public void setTitle(String Title) {
+        rTitle = title;
+    }
+    public String getCreationDate() {
+        return rCreationDate;
+    }
+    public void setCreationDate(String creationDate) {
+        rCreationDate = creationDate;
+    }
+    private String rTitle;
+    private String rCreationDate;
+    public int getGrade() {
+        return rGrade;
+    }
+    public void setGrade(int Grade) {
+        rGrade = grade;
+    }
+    private int rGrade;
+    public Curse(String title, String  Establishment, int Grade, String creationDate) {
+        rTitle = title;
+        rEstablishment =  Establishment;
+        rGrade = Grade;
+        rCreationDate = creationDate;
+    }
+}
