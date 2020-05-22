@@ -3,8 +3,8 @@ import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-@Entity(tableName = "Curse")
-public class Curse {
+@Entity(tableName = "courses")
+public class Course {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "curseId")
@@ -22,13 +22,13 @@ public class Curse {
     public String getEstablishment() {
         return rEstablishment;
     }
-    public void setEstablishment(@Nullable String Establishment) {
+    public void setEstablishment(@Nullable String establishment) {
         rEstablishment = establishment;
     }
     public String getTitle() {
         return rTitle;
     }
-    public void setTitle(String Title) {
+    public void setTitle(String title) {
         rTitle = title;
     }
     public String getCreationDate() {
@@ -42,11 +42,11 @@ public class Curse {
     public int getGrade() {
         return rGrade;
     }
-    public void setGrade(int Grade) {
+    public void setGrade(int grade) {
         rGrade = grade;
     }
     private int rGrade;
-    public Curse(String title, String  Establishment, int Grade, String creationDate) {
+    public Course(String title, String  Establishment, int Grade, String creationDate) {
         rTitle = title;
         rEstablishment =  Establishment;
         rGrade = Grade;
